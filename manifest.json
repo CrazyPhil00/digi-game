@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "HTML Modifier",
+  "version": "1.0",
+  "description": "A simple Chrome extension to modify HTML on all websites.",
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_title": "HTML Modifier",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://rgtfo-me.digitalesregister.it/v2/"],
+      "run-at": "document_end",
+      "js": ["content.js"]
+    }
+  ]
+}
